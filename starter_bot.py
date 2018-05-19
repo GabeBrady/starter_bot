@@ -48,6 +48,11 @@ def handle_command(command, channel):
     if command.startswith(EXAMPLE_COMMAND):
         response = "Sure...write some more code then I can do that!"
 
+    # Custom command I've written
+
+    if command.startswith("what's your name?"):
+        response = "My name is Starter Bot"
+
     # Sends the response back to the channel
     slack_client.api_call(
         "chat.postMessage",
